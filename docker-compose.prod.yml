@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      context: .
+    command: yarn docker:start
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongodb:27017/express-rest-es2017-boilerplate
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_db:/data/db
+
+volumes:
+  mongo_db:

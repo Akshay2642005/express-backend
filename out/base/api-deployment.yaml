@@ -1,0 +1,38 @@
+#! api-deployment.yaml
+# Generated code, do not edit
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  namespace: express-backend
+  labels:
+    com.docker.compose.project: express-backend
+    com.docker.compose.service: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      com.docker.compose.project: express-backend
+      com.docker.compose.service: api
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        com.docker.compose.project: express-backend
+        com.docker.compose.service: api
+        com.docker.compose.network.default: "true"
+    spec:
+      containers:
+        - name: api
+          image: express-backend-api
+          imagePullPolicy: IfNotPresent
+          command: ["yarn", "docker:start"]
+          env:
+            - name: MONGO_URI
+              value: "mongodb://mongodb:27017/express-rest-es2017-boilerplate"
+            - name: NODE_ENV
+              value: "production"
+          ports:
+            - name: api-3000
+              containerPort: 3000

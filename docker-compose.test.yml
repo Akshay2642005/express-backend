@@ -1,0 +1,5 @@
+services:
+  boilerplate-api:
+    command: yarn test
+    environment:
+      - NODE_ENV=test

@@ -1,9 +1,0 @@
-#! mongodb-mongo_db-persistentVolumeClaim.yaml
-# Generated code, do not edit
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-    name: mongodb-mongo-db
-    namespace: express-backend
-spec:
-    storageClassName: "hostpath" # see docker/desktop-storage-provisioner

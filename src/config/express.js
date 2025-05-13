@@ -1,6 +1,5 @@
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const compress = require('compression');
 const methodOverride = require('method-override');
 const cors = require('cors');
@@ -20,9 +19,9 @@ const app = express();
 // request logging. dev: console | production: file
 app.use(morgan(logs));
 
-// parse body params and attache them to req.body
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// parse body params and attach them to req.body
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // gzip compression
 app.use(compress());
@@ -54,3 +53,4 @@ app.use(error.notFound);
 app.use(error.handler);
 
 module.exports = app;
+

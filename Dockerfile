@@ -19,4 +19,4 @@ RUN yarn install --frozen-lockfile
 COPY . .
 
 # Default command to start the app using yarn
-CMD ["yarn", "docker:start"]
+CMD ["yarn", "dev"]

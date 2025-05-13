@@ -12,16 +12,5 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-      - MONGO_URI=mongodb://mongodb:27017/express-rest-es2017-boilerplate
-    depends_on:
-      - mongodb
+      - MONGO_URI=mongodb://192.168.18.101:27017/express-rest-es2017-boilerplate
 
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_db:/data/db
-
-volumes:
-  mongo_db:

@@ -25,9 +25,9 @@ spec:
     spec:
       containers:
         - name: api
-          image: express-backend-api
+          image: akshay2642005/express-backend-api:dev
           imagePullPolicy: IfNotPresent
-          command: ["yarn", "docker:start"]
+          command: ["yarn", "dev"]
           env:
             - name: MONGO_URI
               value: "mongodb://mongodb:27017/express-rest-es2017-boilerplate"

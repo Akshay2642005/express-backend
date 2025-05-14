@@ -34,11 +34,11 @@ spec:
             - name: NODE_ENV
               value: "development"
             - name: EMAIL_PASSWORD
-              value: khnc vqnq ahem xsxu
+              value: "khnc vqnq ahem xsxu"
             - name: EMAIL_USERNAME
-              value: sandoff510@gmail.com
+              value: "sandoff510@gmail.com"
             - name: JWT_SECRET
-              value: bA2xcjpf8y5aSUFsNB2qN5yymUBSs6es3qHoFpGkec75RCeBb8cpKauGefw5qy4
+              value: "bA2xcjpf8y5aSUFsNB2qN5yymUBSs6es3qHoFpGkec75RCeBb8cpKauGefw5qy4"
             - name: JWT_EXPIRATION_MINUTES
               value: 15
           ports:

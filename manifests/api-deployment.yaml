@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: akshay2642005/express-backend-api:dev
+          image: quay.io/akshay2642005/express-backend:2468c3a9-8-17
           imagePullPolicy: IfNotPresent
           command: ["yarn", "dev"]
           env:

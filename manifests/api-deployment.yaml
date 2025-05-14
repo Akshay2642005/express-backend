@@ -40,7 +40,7 @@ spec:
             - name: JWT_SECRET
               value: "bA2xcjpf8y5aSUFsNB2qN5yymUBSs6es3qHoFpGkec75RCeBb8cpKauGefw5qy4"
             - name: JWT_EXPIRATION_MINUTES
-              value: 15
+              value: "15"
           ports:
             - name: api-3000
               containerPort: 3000
